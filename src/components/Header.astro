@@ -1,0 +1,50 @@
+---
+import ImageLogo from '../components/ImageLogo.astro'
+import ToggleThemeButton from './ToggleThemeButton.astro'
+
+const currentPath = Astro.url.pathname
+---
+
+<header class="sticky top-0 z-30 w-full dark:bg-[#010319] bg-[#F2F2F2]" id="header">
+  <nav class="flex items-center justify-between px-4 py-3 transition-all duration-[200ms]">
+    <ImageLogo size="48" color="dark:green black" />
+    <div>
+      <ul class="flex gap-6">
+        <li>
+          <a href="/" class={`${currentPath == '/' ? 'font-medium' : 'font-normal'} dark:text-white text-black text-balance dark:hover:opacity-80 hover:opacity-60 transition-all duration-200 font-sans-serif`}>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" class={`${currentPath == '/about' ? 'font-medium' : 'font-normal'} dark:text-white text-black text-balance dark:hover:opacity-80 hover:opacity-60 transition-all duration-200 font-sans-serif`}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/projects" class="dark:text-white text-black text-balance dark:hover:opacity-80 hover:opacity-60 transition-all duration-200 font-sans-serif">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="/blogs" class="dark:text-white text-black text-balance dark:hover:opacity-80 hover:opacity-60 transition-all duration-200 font-sans-serif">
+            Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ToggleThemeButton />
+  </nav>
+</header>
+
+<script is:inline>
+  window.addEventListener('scroll', () => {
+    console.log('test')
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      if (!document.getElementById('header').classList.contains('shadow-sm')) {
+        document.getElementById('header').classList.add('shadow-sm')
+      }
+    } else {
+      document.getElementById('header').classList.remove('shadow-sm')
+    }
+  })
+</script>

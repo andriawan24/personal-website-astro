@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+const pageTitle = 'Home'
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<div class="flex flex-col-reverse md:flex-row items-center justify-center px-20 lg:px-60 gap-10 md:gap-20 py-20 lg:py-[150px]">
+		<div class="flex flex-col">
+			<h1 class="dark:text-white text-center md:text-left text-black text-4xl font-sans-serif font-light">
+				Hello, I am <span class="font-medium">Naufal</span>
+			</h1>
+			<p class="dark:text-white text-center md:text-left text-black mt-4 font-light">
+				Phasellus aliquam feugiat lorem eu suscipit. Aenean cursus ex at sapien rutrum pharetra. Fusce lacinia tincidunt accumsan. Vestibulum elit mi, scelerisque at ex non, accumsan ornare massa.
+			</p>
+			<a href="https://www.linkedin.com/in/naufal-fawwaz-andriawan/" target="_blank" class="px-12 rounded-lg py-3 mt-12 mr-auto ml-auto md:ml-0 bg-[#1446B3] text-white font-sans-serif font-medium text-[16px]">
+				Download Resume
+			</a>
+		</div>
+		<img src="/images/home/img_profile.png" class="dark:hidden block w-[250px] h-[250px]" alt="Profile">
+		<img src="/images/home/img_profile_dark.png" class="dark:block hidden w-[250px] h-[250px]" alt="Profile">
+	</div>
+	<div class="latest-posts px-[36px]">
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+		<h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">Latest Posts</h3>
+	</div>
+</BaseLayout>
