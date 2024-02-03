@@ -23,13 +23,15 @@ const socials = [
 ]
 ---
 
-<footer class="mt-12 py-[48px] flex flex-col items-center gap-[24px] justify-center">
+<footer class="py-[48px] flex flex-col items-center gap-[24px] justify-center">
   <div class="flex flex-row justify-center gap-[35px]">
     {socials.map((social) => (
-      <a href={social.url} target="_blank">
-        <img src={`/icons/${social.icon}`} decoding="async" loading="lazy" class="w-[30px] h-[30px]" alt={social.name} />
+      <a href={social.url} target="_blank" class="hover:opacity-80 transition-all duration-200">
+        <img src={`/icons/${social.icon}`} decoding="async" loading="lazy" class="h-[30px]" alt={social.name} />
       </a>
     ))}
   </div>
-  <p class="font-sans-serif font-medium text-[14px] text-[#222222]">Copyright &copy; 2024 All Right Reserved </p>
+  <p class="font-sans-serif font-medium text-[14px] text-[#222222]">
+    Copyright &copy; 2024 All Right Reserved.
+  </p>
 </footer>

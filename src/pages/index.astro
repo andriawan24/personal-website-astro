@@ -1,4 +1,5 @@
 ---
+import Company from '../components/home/Company.astro'
 import HomeHeaderSection from '../components/home/HomeHeaderSection.astro'
 import LatestPosts from '../components/home/LatestPosts.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
@@ -8,4 +9,5 @@ const pageTitle = 'Home'
 <BaseLayout pageTitle={pageTitle}>
 	<HomeHeaderSection />
 	<LatestPosts />
+	<Company />
 </BaseLayout>
