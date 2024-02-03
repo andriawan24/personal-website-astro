@@ -1,0 +1,49 @@
+---
+import ImageLogo from './ImageLogo.astro'
+import NavItem from './NavItem.astro'
+import ToggleThemeButton from './ToggleThemeButton.astro'
+
+const navigations = [
+  {
+    url: '/',
+    title: 'Home'
+  },
+  {
+    url: '/about',
+    title: 'About'
+  },
+  {
+    url: '/projects',
+    title: 'Projects'
+  },
+  {
+    url: '/blogs',
+    title: 'Blog'
+  }
+]
+---
+
+<header class="sticky top-0 z-30 w-full dark:bg-[#010319] bg-[#F2F2F2]" id="header">
+  <div class="flex items-center justify-between px-4 py-3 transition-all duration-[200ms]">
+    <ImageLogo size="48" color="dark:green black" />
+    <nav>
+      <ul class="flex gap-6">
+        {navigations.map((item) => <NavItem url={item.url} title={item.title} />)}
+      </ul>
+    </nav>
+    <ToggleThemeButton />
+  </div>
+</header>
+
+<script is:inline>
+  window.addEventListener('scroll', () => {
+    console.log('test')
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      if (!document.getElementById('header').classList.contains('shadow-sm')) {
+        document.getElementById('header').classList.add('shadow-sm')
+      }
+    } else {
+      document.getElementById('header').classList.remove('shadow-sm')
+    }
+  })
+</script>
