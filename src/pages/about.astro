@@ -1,9 +1,37 @@
 ---
+import Company from "../components/home/Company.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-
+const descriptions = [
+  "Hello, I am Naufal. My programming journey started when I was in junior high school. I played around with my computer until I decided to enter Vocational High School with a Software Engineering major at SMK Negeri 2 Kota Bandung and ended up as an software engineering student at Universitas Pendidikan Indonesia.",
+  "I am 19 years old and I live in Bandung with my lovely parents and younger sister. My daily activities are studying, coding, and working during the workday and weekends. Sometimes, I play a game or watch my favorite movies when I'm bored.",
+  "As a software engineering student, I have acquired software development life cycle skills, collaboration and versioning control with Git, project management, human and computer interaction, and software development (website and mobile). Currently, I hold a 3.94 GPA."
+]
+const expertises = [
+  "Android Development",
+  "iOS Development",
+  "Multiplatform Mobile App Development",
+  "Project Management",
+  "Version Control"
+]
 ---
 
 <BaseLayout pageTitle="About">
-  <h1>This is about page</h1>
+  <article class="container max-w-3xl mx-auto px-[48px] md:px-0 py-[48px]">
+    <h1 class="text-4xl font-sans-serif text-[#222222] dark:text-white font-medium underline underline-offset-8 decoration-[#D9D9D9] decoration-4 mb-4">
+      About Me
+    </h1>
+    {descriptions.map((description) => (
+      <p class="mt-[24px] font-sans-serif text-[#222222] dark:text-white">{description}</p>
+    ))}
+    <h1 class="text-2xl font-sans-serif text-[#222222] dark:text-white font-medium underline underline-offset-8 decoration-[#D9D9D9] decoration-4 mb-4 mt-[48px]">
+      My Expertise
+    </h1>
+    <ul class="list-disc mx-6 mt-[24px]">
+      {expertises.map((expertise) => (
+        <li class="font-sans-serif mt-2 text-[#222222] dark:text-white">{expertise}</li>
+      ))}
+    </ul>
+  </article>
+  <Company />
 </BaseLayout>

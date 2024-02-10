@@ -1,0 +1,20 @@
+---
+import ProjectItem from "../common/ProjectItem.astro";
+
+
+---
+<article class="latest-posts px-[36px] flex flex-col gap-[24px] mt-[48px]">
+  <div class="flex flex-row justify-between items-center">
+    <h3 class="font-sans-serif text-lg font-medium text-[#222222] dark:text-white">
+      Recent Projects
+    </h3>
+    <a class="font-sans-serif text-sm text-[#B5B5B5] hover:opacity-80 transition-all duration-200" href="/blogs">
+      See All Projects
+    </a>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]">
+    <ProjectItem />
+    <ProjectItem />
+    <ProjectItem />
+  </div>
+</article>
