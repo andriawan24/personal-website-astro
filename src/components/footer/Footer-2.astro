@@ -1,0 +1,42 @@
+---
+const socials = [
+  {
+    name: 'Facebook',
+    url: 'https://facebook.com',
+    icon: 'ic_facebook.webp',
+    iconDark: 'ic_facebook_dark.webp'
+  },
+  {
+    name: 'Instagram',
+    url: 'https://instagram.com/andriawan245',
+    icon: 'ic_instagram.webp',
+    iconDark: 'ic_instagram_dark.webp'
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/fawaznaufal23',
+    icon: 'ic_twitter.webp',
+    iconDark: 'ic_twitter_dark.webp'
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/naufal-fawwaz-andriawan/',
+    icon: 'ic_linkedin.webp',
+    iconDark: 'ic_linkedin_dark.webp'
+  }
+]
+---
+
+<footer class="py-[24px] flex flex-col items-center gap-[18px] justify-center bg-slate-200 dark:bg-slate-900">
+  <div class="flex flex-row justify-center gap-[24px]">
+    {socials.map((social) => (
+      <a href={social.url} target="_blank" class="hover:opacity-80 transition-all duration-200">
+        <img src={`/icons/${social.icon}`} decoding="async" loading="lazy" class="h-[24px] block dark:hidden" alt={social.name} />
+        <img src={`/icons/${social.iconDark}`} decoding="async" loading="lazy" class="h-[24px] hidden dark:block" alt={social.name} />
+      </a>
+    ))}
+  </div>
+  <p class="font-sans-serif font-medium text-[14px] text-[#222222] dark:text-[#FBFBFB]">
+    Copyright &copy; 2024 All Right Reserved.
+  </p>
+</footer>

@@ -1,0 +1,65 @@
+---
+import BaseLayout2 from '../../layouts/BaseLayout-2.astro'
+
+export const getStaticPaths = () => {
+  return [
+    { params: { id: 1 } }
+  ]
+}
+const { id } = Astro.params
+---
+
+<BaseLayout2>
+  <section class="flex flex-col">
+    <div class="flex flex-row gap-3 mx-6 mt-8">
+      <button onclick="history.back()">
+        <img src="/icons/ic_back.png" class="w-8 h-8" alt="Back Button" />
+      </button>
+      <h1 class="text-2xl font-sans-serif font-medium text-[#222222] dark:text-white">Project Detail</h1>
+    </div>
+    <div class="detail flex flex-row mx-8 sm:mx-[68px] mt-12 gap-6">
+      <img src="https://picsum.photos/200/200.webp" alt="Project Cover" loading="lazy">
+      <div class="flex flex-col">
+        <h3 class="text-2xl font-sans-serif font-medium text-[#222222] dark:text-white">Galasin</h3>
+        <span class=" font-sans-serif text-[#373232] mt-2">20 July 2023</span>
+        <div class="tags mt-[24px] flex flex-row flex-wrap gap-[8px]">
+          <span class="px-[16px] py-[8px] dark:bg-neutral-600 bg-neutral-200 rounded-[24px] font-sans-serif text-[14px] dark:text-[#FBFBFB] text-[#222222] font-semibold">
+            Android Development
+          </span>
+          <span class="px-[16px] py-[8px] dark:bg-neutral-600 bg-neutral-200 rounded-[24px] font-sans-serif text-[14px] dark:text-[#FBFBFB] text-[#222222] font-semibold">
+            Kotlin
+          </span>
+          <span class="px-[16px] py-[8px] dark:bg-neutral-600 bg-neutral-200 rounded-[24px] font-sans-serif text-[14px] dark:text-[#FBFBFB] text-[#222222] font-semibold">
+            Firebase
+          </span>
+        </div>
+        <div class="tags mt-[24px] flex flex-row flex-wrap gap-[8px]">
+          <a href="/" class="px-6 py-3 flex flex-row gap-2 justify-center items-center dark:bg-neutral-600 bg-neutral-200 hover:bg-neutral-300 dark:hover:bg-neutral-700 duration-200 transition-all rounded-lg font-sans-serif text-[14px] dark:text-[#FBFBFB] text-[#222222] font-semibold">
+            Github
+            <span><img src="/icons/ic_github.png" class="w-6 h-6" alt="Github Icon"></span>
+          </a>
+          <a href="/" class="px-6 py-3 flex flex-row gap-2 justify-center items-center dark:bg-neutral-600 bg-neutral-200 hover:bg-neutral-300 dark:hover:bg-neutral-700 duration-200 transition-all rounded-lg font-sans-serif text-[14px] dark:text-[#FBFBFB] text-[#222222] font-semibold">
+            Testflight
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-6 h-2" />
+    <div class="flex flex-col mx-8 sm:mx-[68px] mt-6 mb-6">
+      <h3 class="font-sans-serif text-xl font-medium">User Interfaces</h3>
+      <div class="flex flex-row flex-wrap gap-7 mt-6">
+        <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
+        <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
+        <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
+        <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
+      </div>
+      <h3 class="font-sans-serif text-xl font-medium mt-6">Description</h3>
+      <p class="mt-6 font-sans-serif">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus commodo nulla in porttitor. Nunc quis lectus eget nibh rutrum venenatis a a lectus. Fusce aliquet nisi in libero faucibus auctor. Nam aliquet odio at tristique luctus. Aliquam vulputate nibh et consequat fermentum. Proin vel quam elit. Mauris lorem felis, laoreet vel sem eu, elementum tincidunt tortor. Aenean vel leo id purus consequat elementum. Pellentesque tortor mauris, varius quis turpis id, condimentum volutpat mi. Integer aliquam tortor a purus auctor aliquam.
+      </p>
+      <p class="mt-6 font-sans-serif">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus commodo nulla in porttitor. Nunc quis lectus eget nibh rutrum venenatis a a lectus. Fusce aliquet nisi in libero faucibus auctor. Nam aliquet odio at tristique luctus. Aliquam vulputate nibh et consequat fermentum. Proin vel quam elit. Mauris lorem felis, laoreet vel sem eu, elementum tincidunt tortor. Aenean vel leo id purus consequat elementum. Pellentesque tortor mauris, varius quis turpis id, condimentum volutpat mi. Integer aliquam tortor a purus auctor aliquam.
+      </p>
+    </div>
+  </section>
+</BaseLayout2>
