@@ -1,5 +1,7 @@
 ---
 import BaseLayout2 from '../../layouts/BaseLayout-2.astro'
+import IconBack from '../../components/icons/IconBack.astro'
+import { Image } from 'astro:assets'
 
 export const getStaticPaths = () => {
   return [
@@ -13,7 +15,7 @@ const { id } = Astro.params
   <section class="flex flex-col">
     <div class="flex flex-row gap-3 mx-6 mt-8">
       <button onclick="history.back()">
-        <img src="/icons/ic_back.png" class="w-8 h-8" alt="Back Button" />
+        <IconBack />
       </button>
       <h1 class="text-2xl font-sans-serif font-medium text-[#222222] dark:text-white">Project Detail</h1>
     </div>
@@ -21,7 +23,7 @@ const { id } = Astro.params
       <img src="https://picsum.photos/200/200.webp" alt="Project Cover" loading="lazy">
       <div class="flex flex-col">
         <h3 class="text-2xl font-sans-serif font-medium text-[#222222] dark:text-white">Galasin</h3>
-        <span class=" font-sans-serif text-[#373232] mt-2">20 July 2023</span>
+        <span class=" font-sans-serif text-[#373232] dark:text-[#b5a8a8] mt-2">20 July 2023</span>
         <div class="tags mt-[24px] flex flex-row flex-wrap gap-[8px]">
           <span class="px-[16px] py-[8px] dark:bg-neutral-600 bg-neutral-200 rounded-[24px] font-sans-serif text-[14px] dark:text-[#FBFBFB] text-[#222222] font-semibold">
             Android Development
@@ -46,18 +48,19 @@ const { id } = Astro.params
     </div>
     <hr class="mt-6 h-2" />
     <div class="flex flex-col mx-8 sm:mx-[68px] mt-6 mb-6">
-      <h3 class="font-sans-serif text-xl font-medium">User Interfaces</h3>
+      <h3 class="font-sans-serif text-xl font-medium text-[#222222] dark:text-white">User Interfaces</h3>
       <div class="flex flex-row flex-wrap gap-7 mt-6">
+        <img src="/images/projects/greenovation-1.png" class="h-80 object-fill" loading="lazy" alt="Test" />
         <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
         <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
         <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
         <img src="https://picsum.photos/200/300.webp" alt="User Interface" />
       </div>
-      <h3 class="font-sans-serif text-xl font-medium mt-6">Description</h3>
-      <p class="mt-6 font-sans-serif">
+      <h3 class="font-sans-serif text-xl font-medium mt-6 text-[#222222] dark:text-white">Description</h3>
+      <p class="mt-6 font-sans-serif text-[#222222] dark:text-white">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus commodo nulla in porttitor. Nunc quis lectus eget nibh rutrum venenatis a a lectus. Fusce aliquet nisi in libero faucibus auctor. Nam aliquet odio at tristique luctus. Aliquam vulputate nibh et consequat fermentum. Proin vel quam elit. Mauris lorem felis, laoreet vel sem eu, elementum tincidunt tortor. Aenean vel leo id purus consequat elementum. Pellentesque tortor mauris, varius quis turpis id, condimentum volutpat mi. Integer aliquam tortor a purus auctor aliquam.
       </p>
-      <p class="mt-6 font-sans-serif">
+      <p class="mt-6 font-sans-serif text-[#222222] dark:text-white">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus commodo nulla in porttitor. Nunc quis lectus eget nibh rutrum venenatis a a lectus. Fusce aliquet nisi in libero faucibus auctor. Nam aliquet odio at tristique luctus. Aliquam vulputate nibh et consequat fermentum. Proin vel quam elit. Mauris lorem felis, laoreet vel sem eu, elementum tincidunt tortor. Aenean vel leo id purus consequat elementum. Pellentesque tortor mauris, varius quis turpis id, condimentum volutpat mi. Integer aliquam tortor a purus auctor aliquam.
       </p>
     </div>

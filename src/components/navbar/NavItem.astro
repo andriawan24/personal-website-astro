@@ -2,8 +2,8 @@
 const { url, title } = Astro.props
 const currentPath = Astro.url.pathname
 ---
-<li>
-  <a href={url} class={`${currentPath == url ? 'font-medium' : 'font-normal'} dark:text-white text-black text-balance dark:hover:opacity-80 hover:opacity-60 transition-all duration-200 font-sans-serif`}>
+<li class={`w-full rounded-md ${currentPath == url ? 'bg-slate-200 dark:bg-slate-800' : 'bg-none'} md:bg-transparent`}>
+  <a href={url} class={`md:${currentPath == url ? ' font-semibold' : 'font-normal'} p-2 md:p-0 block dark:text-white text-black text-balance dark:hover:opacity-80 hover:opacity-60 transition-all duration-200 font-sans-serif`}>
     {title}
   </a>
 </li>

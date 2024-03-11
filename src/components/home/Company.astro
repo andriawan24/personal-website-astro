@@ -1,5 +1,24 @@
 ---
-
+const companies = [
+  {
+    name: "Pegipegi",
+    image_name: 'img_pegipegi.webp',
+    height: 100,
+    link: 'https://pegipegi.com'
+  },
+  {
+    name: "BISA AI",
+    image_name: 'img_bisaai.webp',
+    height: 80,
+    link: 'https://bisa.ai'
+  },
+  {
+    name: "Aptavis",
+    image_name: 'img_aptavis.webp',
+    height: 40,
+    link: 'https://aptavis.net'
+  },
+]
 ---
 
 <div class="flex flex-col mt-[36px] justify-center items-center dark:bg-[#131532] bg-blue-200 py-[24px]">
@@ -7,14 +26,10 @@
     Building apps for these companies
   </h3>
   <div class="flex flex-row items-center overflow-x-auto mt-[36px] px-4 gap-[48px]">
-    <a href="https://pegipegi.com" target="_blank" class="hover:opacity-80 hover:cursor-pointer transition-all duration-200">
-      <img class="object-cover w-[150px]" loading="lazy" src="/images/home/img_pegipegi.webp" alt="Pegipegi" />
-    </a>
-    <a href="https://bisa.ai" target="_blank" class="hover:opacity-80 hover:cursor-pointer transition-all duration-200">
-      <img class="object-cover w-[150px]" loading="lazy" src="/images/home/img_bisaai.webp" alt="BISA AI" />
-    </a>
-    <a href="https://aptavis.net" target="_blank" class="hover:opacity-80 hover:cursor-pointer transition-all duration-200">
-      <img class="object-cover w-[150px]" loading="lazy" src="/images/home/img_aptavis.webp" alt="Aptavis" />
-    </a>
+    {companies.map((company) => (
+      <a href={company.link} target="_blank" class="hover:opacity-80 hover:cursor-pointer transition-all duration-200">
+        <img class={`object-cover h-[${company.height}px]`} loading="lazy" src={`/images/home/${company.image_name}`} alt={company.name} />
+      </a>
+    ))}
   </div>
 </div>
